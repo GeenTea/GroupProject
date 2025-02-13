@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #ffffff;
+    color: #000000;
+}
+#logo img{
+    max-width: 152px; 
+    max-height: 110px;
+}
+header{
+    display: flex;
+    width: 100%;
+    height: 110px;
+    background-color: #C9072A;
+}
+#title-web{
+    margin-left: 40%;
+    display: flex;
+    width: 280px;
+    height: 50px; 
+}
+#title-web p{
+    text-align: center;
+    color: #FFFFFF;
+    font-family: Jacques Francois;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31.65px;
+    letter-spacing: 0%;
+    padding-top: 30px;
+}
+#WELSH:hover{
+    cursor: pointer;
+}
+#EN:hover{
+    cursor: pointer;
+}
+#burger-menu{
+    width: 80px;
+    height: 81px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 96%;
+    
+}
+#burger-menu p{
+    color: #FFFFFF;
+    font-size: 80px;
+    font-weight: bold;
+}
+#burger-menu:hover{
+    cursor: pointer;
+}
+nav ul{
+    visibility: hidden;
+}
+#home_page_img{
+    max-width: 100%;
+    max-height: 48.25rem;
+    overflow: hidden;
+    position: relative;
+    background-color: #FFFFFF;
+}
+#home_page_img img{
+    width: 100%;
+    height: 48.25rem;
+    display: block;
+    filter: opacity(50%);
+}
+#home_mainText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    width: 934px;
+    height: 187px;
+
+}
+#home_mainText p{
+    font-family: Jacques Francois;
+    font-weight: bold;
+    font-size: 94px;
+    line-height: 84.41px;
+    letter-spacing: 0%;
+}
+main{
+    display: block;
+}
+main form{
+    margin-left: 2.75rem;
+    margin-top: 2.5rem;
+    width: 19.125rem;
+    height: 16rem;  
+}
+main form label{
+    font-family: Jacques Francois;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31.65px;
+    letter-spacing: 0%;
+    color: #000000;
+}
+main form input{
+    border: 1px solid #000000;
+}
+main form #email{
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+main form #message{
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 1rem;
+}
+main form textarea{
+    resize: none;
+    border: 1px solid #000000;
+}
+#submit-main-home{
+    width: 7.375rem;
+    height: 2.5rem;
+    border-width: 1px;
+    border-radius: 50px;
+    margin-left: 30%;
+}
