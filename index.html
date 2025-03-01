@@ -8,6 +8,7 @@
     <title>Wrexham</title>
 </head>
 <body>
+    <div class="white-scene"></div>
     <header>
         <div id="logo">
             <img src="./img/ed7e618b16ff89c1ac6e873a459f4cd5.png" alt="logo">
@@ -16,13 +17,18 @@
             <p id="WELSH" onclick="Language_Welsh()">CYMRAEG</p> <p>/</p> <p id="EN" onclick="Language_EN()">ENGLISH</p>
         </div>
         <div id="burger-menu">
-            <p>☰</p>
+            <p onclick="burger_menu()">☰</p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+        <nav id="nav-bar-constructor">
+            <ul id="nav-bar">
+                <center>
+                    <li><a href="index.html">MAIN PAGE</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Legal & Policies</a></li>
+                    <li><a href="">Activities</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                    <li><a href="#">Log In</a></li>
+                </center>
             </ul>
         </nav>
     </header>
@@ -80,5 +86,6 @@
     </footer>
 
     <script src="./js/language.js"></script>
+    <script src="./js/burger-menu.js"></script>
 </body>
 </html>
