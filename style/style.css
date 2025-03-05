@@ -8,6 +8,69 @@ body{
     background-color: #ffffff;
     color: #000000;
 }
+.red-background{
+    background-color: #C9072A;
+    color:#FFFFFF;
+    font-family: Jacques Francois;
+    font-size: 88px;
+}
+.login-sign-background{
+    display: block;
+    margin-top: 50px;
+}
+.login-sign-background h2{
+    margin-bottom: 50px;
+}
+.login-sign-card{
+    background-color: #D9D9D9;
+    width: 573px;
+    height: 850px;
+    border-radius: 25px;
+}
+.login-sign-card form input{
+    display: block;
+}
+.login-sign-card form input{
+    margin-bottom: 80px;
+    width: 534px;
+    height: 80px;
+    position: relative;
+    top: 50px;
+    border: none;
+    border-radius: 10px;
+    font-family: Jacques Francois;
+    font-size: 30px;
+    padding-left: 40px; 
+    color:#000000;
+}
+.login-sign-button{
+    width: 368px;
+    height: 66px;
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    font-family: Jacques Francois;
+    font-size: 30px;
+
+}
+.login-sign-button:hover{
+    cursor: pointer;
+}
+.login-sign-card p{
+    font-size: 30px;
+}
+#login-lang{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 320px;
+}
+#sign-lang{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+}
 #logo img{
     max-width: 152px; 
     max-height: 110px;
