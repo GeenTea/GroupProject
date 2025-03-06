@@ -23,7 +23,7 @@
             <ul id="nav-bar">
                 <center>
                     <li><a href="./index.php">MAIN PAGE</a></li>
-                    <li><a href="./profile.php">Profile</a></li>
+                    <li><a href="#">Profile</a></li>
                     <li><a href="#">Legal & Policies</a></li>
                     <li><a href="">Activities</a></li>
                     <li><a href="./sign-in.php">Sign Up</a></li>
@@ -32,23 +32,27 @@
             </ul>
         </nav>
     </header>
-    <div id="home_page_img">
-        <img src="./img/home/Screenshot_2025-02-12_185214.png" alt="Wrexham-img">
-    </div>
-    <div id="home_mainText">
-        <p id="WREXHAM_main_text">WREXHAM WELSH CENTRE</p>
-    </div>
-    <main>
+    <main id="main-profile">
         <center>
-            <form action="./PHP/contact-us.php" method="post">
-                <label for="Contact" id="form-contact-us">CONTACT US</label><br>
-                <input type="email" id="email" name="email" placeholder="Your email" required><br>
-                <textarea id="message" name="message" required placeholder="Your message"></textarea><br>
-                <input type="submit" value="SUBMIT" id="submit-main-home">
-            </form>
+            <h1 id="profile-title">PROFILE</h1>
         </center>
+        <div class="flex">
+            <div id="img-profile">
+                <img src="./img/profile/71d310737132aef866ee39dda6e650a0c93e71fb.png" alt="">
+            </div>
+            <div id="form-profile">
+                <form action="./profile.php" method="post">
+                    <input type="text" name="name" id="name-profile" placeholder="Name"><br>
+                    <input type="text" name="username" id="username-profile" placeholder="Username"><br>
+                    <input type="tel" name="phone" id="phone-profile" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+                    <input type="email" name="email" id="email-profile" placeholder="Email"><br>
+                    <button type="submit" value="save" id="save-profile">SAVE</button>
+                    <button type="submit" value="delete" id="delete-profile">DELETE</button>
+                </form>
+            </div>
+            </div>
     </main>
-    <footer>
+    <footer id="footer-profile"> 
         <center>
             <div id="contact-info">
                 <p id="contact-info-title">CONTACT INFO</p>
