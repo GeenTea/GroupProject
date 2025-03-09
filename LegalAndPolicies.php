@@ -23,7 +23,7 @@
             <ul id="nav-bar">
                 <center>
                     <li><a href="./index.php">MAIN PAGE</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="./profile">Profile</a></li>
                     <li><a href="#">Legal & Policies</a></li>
                     <li><a href="">Activities</a></li>
                     <li><a href="./sign-in.php">Sign Up</a></li>
