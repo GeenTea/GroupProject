@@ -23,8 +23,8 @@
             <ul id="nav-bar">
                 <center>
                     <li><a href="./index.php">MAIN PAGE</a></li>
-                    <li><a href="./profile.php">Profile</a></li>
-                    <li><a href="./LegalAndPolicies.php">Legal & Policies</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">Legal & Policies</a></li>
                     <li><a href="">Activities</a></li>
                     <li><a href="./sign-in.php">Sign Up</a></li>
                     <li><a href="./login.php">Log In</a></li>
@@ -32,23 +32,59 @@
             </ul>
         </nav>
     </header>
-    <div id="home_page_img">
-        <img src="./img/home/Screenshot_2025-02-12_185214.png" alt="Wrexham-img">
-    </div>
-    <div id="home_mainText">
-        <p id="WREXHAM_main_text">WREXHAM WELSH CENTRE</p>
-    </div>
-    <main>
-        <center>
-            <form action="./PHP/contact-us.php" method="post">
-                <label for="Contact" id="form-contact-us">CONTACT US</label><br>
-                <input type="email" id="email" name="email" placeholder="Your email" required><br>
-                <textarea id="message" name="message" required placeholder="Your message"></textarea><br>
-                <input type="submit" value="SUBMIT" id="submit-main-home">
-            </form>
-        </center>
+    <main id="main-legalAndPolicies">
+        <div id="legalAndPolicies-Title">
+            <center>
+                <h1>Legal & Policies</h1>
+            </center> 
+        </div>
+        <div class="flex">
+            <div class="center-cart">
+                <!-- cart 1 -->
+                <div class="cart_legalAndPolicies">
+                    <div class="cart-text-legal">
+                        <center>
+                            <h1>Privacy</h1>
+                            <p><u>Information we collect:</u></p>
+                            <p>Personal details. Website usage data.</p>
+                            <br>
+                            <p><u>How we use your information:</u></p>
+                            <p>To provide services. To improve our website and services.
+                            To comply with legal requirements.</p>
+                        </center>
+                    </div>
+                    
+                </div>
+                <!-- cart 2 -->
+                <div class="cart_legalAndPolicies">
+                    <div class="cart-text-legal">
+                        <center>
+                            <h1>Cookies</h1>
+                            <p>Our website uses cookies to enhance your experience.</p>
+                            <br>
+                            <br>
+                            <p>You can manage cookie preferences through your browser settings.</p>
+                        </center>
+                    </div>
+                </div>
+                <!-- cart 3 -->
+                <div class="cart_legalAndPolicies">
+                    <div class="cart-text-legal">
+                        <center>
+                            <h1>Terms of Use</h1>
+                            <p>By using the Wrexham Welsh Centre website, you agree to the following terms:</p>
+                            <ul>
+                                <li>Use of Content: All content is for informational purposes. Do not copy or distribute without permission.</li>
+                                <li>User Conduct: Be respectful when interacting with our site. No harmful or unlawful activity is allowed.</li>
+                                <li>Privacy: We collect and use data as outlined in our Privacy Policy.</li>
+                            </ul>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-    <footer>
+    <footer id="footer-profile"> 
         <center>
             <div id="contact-info">
                 <p id="contact-info-title">CONTACT INFO</p>
