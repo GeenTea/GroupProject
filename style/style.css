@@ -422,3 +422,35 @@ footer{
     margin: 0 auto;
     padding: 10px;
 }
+.cart-text-activities{
+    font-family: Jacques Francois;
+    font-size: 24px;
+}
+.cart-text-activities h1{
+    font-size: 40px;
+    font-family: Jacques Francois;
+}
+#practice{
+    margin-bottom: 26px;
+}
+.cart-text-activities img{
+    margin-top: 130px;
+    width: 399px;
+    height: 225px;
+}
+#practice-img {
+    width: 300px;
+    height: 300px;
+    margin-top: 0px;
+}
+#party-img{
+    width: 365px;
+    height: 243px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+#dart-img{
+    width: 261px;
+    height: 174px;
+    margin-top: 0px;
+}

@@ -25,7 +25,7 @@
                     <li><a href="./index.php">MAIN PAGE</a></li>
                     <li><a href="./profile.php">Profile</a></li>
                     <li><a href="./LegalAndPolicies.php">Legal & Policies</a></li>
-                    <li><a href="">Activities</a></li>
+                    <li><a href="./activities.php">Activities</a></li>
                     <li><a href="./sign-in.php">Sign Up</a></li>
                     <li><a href="./login.php">Log In</a></li>
                 </center>
