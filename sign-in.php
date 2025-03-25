@@ -13,7 +13,7 @@
         <div class="login-sign-background">
             <h2>SIGN UP</h2>
             <div class="login-sign-card">
-                <form action="./PHP/login.php" method="post">
+                <form action="./sign-in.php" method="post">
                     <input type="text" name="username" id="username" placeholder="Create Username" required>
                     <input type="email" name="email" id="email" placeholder="Add e-mail" required>
                     <input type="password" name="password" id="password" placeholder="Create Password" required>
@@ -27,5 +27,21 @@
     </center>
     <script src="./js/language.js"></script>
     <script src="./js/burger-menu.js"></script>
+
+    <?php
+                
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            
+            $username = $_POST['username'];
+            $email = $_POST['email'];
+            $password = $_POST['password'];
+        
+            header("Location: ./index.php");
+            exit(); 
+        } //else {
+        //     echo "<p>Please fill out the registration form..</p>";
+        // }
+    ?>
+
 </body>
 </html>
