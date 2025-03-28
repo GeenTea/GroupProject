@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,13 +14,13 @@
             <!-- <p id="WELSH" onclick="Language_Welsh()">CYMRAEG</p> <p>/</p> <p id="EN" onclick="Language_EN()">ENGLISH</p> -->
     <center>
         <div class="login-sign-background">
-            <h2>SIGN UP</h2>
+            <h2 id="sign-up-title">SIGN UP</h2>
             <div class="login-sign-card">
                 <form action="./sign-in.php" method="post">
                     <input type="text" name="username" id="username" placeholder="Create Username" required>
                     <input type="email" name="email" id="email" placeholder="Add e-mail" required>
                     <input type="password" name="password" id="password" placeholder="Create Password" required>
-                    <button type="submit" value="Sign up" class="login-sign-button">Sign Up</button>
+                    <button type="submit" value="Sign up" id="Sign-up"class="login-sign-button" name="signup">Sign Up</button>
                 </form>
                 <div id="sign-lang">
                     <p id="WELSH" onclick="Language_Welsh()">CYMRAEG</p> <p>/</p> <p id="EN" onclick="Language_EN()">ENGLISH</p>
@@ -25,22 +28,54 @@
             </div>
         </div>
     </center>
-    <script src="./js/language.js"></script>
+    <script src="./js/sign-up-translate.js"></script>
     <script src="./js/burger-menu.js"></script>
-
     <?php
-                
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            
+        if(isset($_POST["signup"])) {
+            include 'config.php';
+
             $username = $_POST['username'];
             $email = $_POST['email'];
             $password = $_POST['password'];
+
         
-            header("Location: ./index.php");
-            exit(); 
-        } //else {
-        //     echo "<p>Please fill out the registration form..</p>";
-        // }
+            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+            
+            $sql = "SELECT * FROM users WHERE username1 = '$username' OR email = '$email'";
+            $result = mysqli_query($conn, $sql);
+            $row = mysqli_fetch_assoc($result);
+
+            if ($row) {
+                echo "
+                <center>
+                    <p style='font-size:24px;'>Username or email already exists!</p>
+                </center>
+                ";
+            } else {
+
+                
+                $sql = "INSERT INTO users (username1, email, password1) VALUES ('$username', '$email', '$hashed_password')";
+                if (mysqli_query($conn, $sql)) {
+                    
+                    $sql = "SELECT * FROM users WHERE email = '$email'";
+                    $result = mysqli_query($conn, $sql);
+                    $user = mysqli_fetch_assoc($result);
+                    $_SESSION['username'] = $user['username1'];
+                    $_SESSION['email'] = $user['email'];
+                    $_SESSION['phone'] = $user['phone'];
+                    $_SESSION['name'] = $user['name'];
+                    header("Location: index.php");
+                    exit();
+                } else {
+                    echo "
+                    <center>
+                        <p style='font-size:24px;'>Error: Could not register user.</p>
+                    </center>
+                    ";
+                }
+            }
+    }
     ?>
 
 </body>
