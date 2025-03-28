@@ -1,0 +1,7 @@
+CREATE DATABASE wrex_centre;
+CREATE TABLE `wrex_centre`.`users` (`id` INT(11) NOT NULL AUTO_INCREMENT , `username1` VARCHAR(20) NOT NULL , `password1` INT(10) NOT NULL , `email` VARCHAR(50) NOT NULL , `phone` VARCHAR(10) NOT NULL , `name` VARCHAR(20) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+INSERT INTO users (username1,password1,email,phone,name) VALUES ('admin','12345678','adminis@gmail.com','6922113344','adminis');
+CREATE TABLE contactus(
+	email varchar(20),
+    message varchar(1000)
+);

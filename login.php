@@ -14,45 +14,44 @@
             <!-- <p id="WELSH" onclick="Language_Welsh()">CYMRAEG</p> <p>/</p> <p id="EN" onclick="Language_EN()">ENGLISH</p> -->
     <center>
         <div class="login-sign-background">
-            <h2>LOGIN</h2>
+            <h2 id="login-title">LOGIN</h2>
             <div class="login-sign-card">
                 <form action="./login.php" method="post">
                     <input type="text" name="username" id="username" placeholder="Username" required>
                     <input type="password" name="password" id="password" placeholder="Password" required>
-                    <button type="submit" value="Login" class="login-sign-button" name="login">Login</button>
+                    <button type="submit" value="Login" class="login-sign-button" id="login" name="login">Login</button>
                 </form>
                 <div id="login-lang">
-                    <p id="WELSH" onclick="Language_Welsh()">CYMRAEG</p> <p>/</p> <p id="EN" onclick="Language_EN()">ENGLISH</p>
+                    <p id='WELSH' onclick='Language_Welsh()'>CYMRAEG</p> <p>/</p> <p id='EN' onclick='Language_EN()'>ENGLISH</p>
                 </div>
             </div>
         </div>
     </center>
     <?php
-                if(isset($_POST["login"])) {
-                    include 'config.php';
-                    $username1 = $_POST['username'];
-                    $password1 = $_POST['password'];
+        if(isset($_POST["login"])) {
+            include 'config.php';
+            
+            $username = $_POST['username'];
+            $password = $_POST['password'];
+        
+            $sql = "SELECT * FROM users WHERE username1 = '$username'";
+            $result = mysqli_query($conn, $sql);
+            $user = mysqli_fetch_assoc($result);
+        
+            if ($user && password_verify($password, $user['password1'])) {
+                $_SESSION['username'] = $user['username1'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['phone'] = $user['phone'];
+                $_SESSION['name'] = $user['name'];
 
-                    $sql="SELECT * FROM users WHERE username1='$username1' AND password1='$password1'";
-                    
-                    $result = mysqli_query($conn,$sql);
-
-                    $row = mysqli_fetch_assoc($result);
-
-                    if (!$row){
-                        echo "
-                        <center>
-                            <p style='font-size:24px;'>Wrong email or password</p>
-                        </center>
-                        ";
-                    }
-                    else {
-                        header("Location: ./index.php");
-                        $_SESSION['username'] = $row['username1'];
-                    }
-                }
+                header("Location: index.php");
+                exit();
+            } else {
+                $error = "error password";
+            }
+        }
         ?>
-    <script src="./js/language.js"></script>
+    <script src="./js/login-translate.js"></script>
     <script src="./js/burger-menu.js"></script>
 </body>
 </html>
