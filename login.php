@@ -39,6 +39,7 @@
             $user = mysqli_fetch_assoc($result);
         
             if ($user && password_verify($password, $user['password1'])) {
+                $_SESSION['id'] = $user['id'];
                 $_SESSION['username'] = $user['username1'];
                 $_SESSION['email'] = $user['email'];
                 $_SESSION['phone'] = $user['phone'];
@@ -47,7 +48,8 @@
                 header("Location: index.php");
                 exit();
             } else {
-                $error = "error password";
+                $error = "<center><h3>error password</h3></center>";
+                echo $error;
             }
         }
         ?>
