@@ -1,5 +1,9 @@
 <?php
     session_start();
+    if(!isset($_SESSION['username'])){
+        header("Location: index.php");
+        exit;
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,14 +28,20 @@
                 <img src="./img/profile/71d310737132aef866ee39dda6e650a0c93e71fb.png" alt="">
             </div>
             <div id="form-profile">
-                <form action="./profile.php" method="post">
-                    <input type="text" name="name" id="name-profile" placeholder="Name"><br>
-                    <input type="text" name="username" id="username-profile" placeholder="Username"><br>
-                    <input type="tel" name="phone" id="phone-profile" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
-                    <input type="email" name="email" id="email-profile" placeholder="Email"><br>
-                    <button type="submit" value="save" id="save-profile">SAVE</button>
-                    <button type="submit" value="delete" id="delete-profile">DELETE</button>
-                </form>
+                <?php 
+                    echo'
+                    <form action="./profile.php" method="post">
+                        <input type="text" name="name" id="name-profile" placeholder="Name" value="'.$_SESSION["name"].'"><br>
+                        <input type="text" name="username" id="username-profile" placeholder="Username" value="'.$_SESSION["username"].'"><br>
+                        <input type="tel" name="phone" id="phone-profile" placeholder="Phone Number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="'.$_SESSION["phone"].'"><br>
+                        <input type="email" name="email" id="email-profile" placeholder="Email" value="'.$_SESSION["email"].'"><br>
+                        <button type="submit" value="save" name="save" id="save-profile">SAVE</button>
+                        <button type="submit" value="delete" name="delete" id="delete-profile">DELETE</button>
+                    </form>
+                    ';
+                ?>
+            </div>
+                
             </div>
             </div>
     </main>
@@ -39,7 +49,50 @@
         include "./component/footer.php";
     ?>
 
-    <script src="./js/language.js"></script>
+    <?php
+        if(isset($_POST["save"]) && isset($_POST['name']) && isset($_POST['username']) && isset($_POST['phone']) && isset($_POST['email'])) {
+            include 'config.php';
+
+            $name = $_POST['name'];
+            $username = $_POST['username']; 
+            $phone = $_POST['phone'];
+            $email = $_POST['email'];
+            $id = $_SESSION["id"];
+
+            $sql = "UPDATE users SET name='$name', username1='$username', phone='$phone', email='$email' WHERE id='$id'";
+            
+            if (mysqli_query($conn, $sql)) {
+                $_SESSION['name'] = $name;
+                $_SESSION['username'] = $username;
+                $_SESSION['phone'] = $phone;
+                $_SESSION['email'] = $email;
+                
+                echo "<script>alert('Profile updated successfully!');</script>";
+                echo "<script>window.location.href = './profile.php';</script>";
+            } else {
+                echo "<script>alert('Error updating profile: " . mysqli_error($conn) . "');</script>";
+                echo "<!-- SQL Error: " . $sql . " -->";
+            }
+        }
+        if(isset($_POST["delete"])) {
+            include 'config.php';
+
+            $id = $_SESSION["id"];
+
+            $sql = "DELETE FROM users WHERE id='$id'";
+            
+            if (mysqli_query($conn, $sql)) {
+
+                session_destroy();
+
+            } else {
+                echo "<script>alert('Error deleting account: " . mysqli_error($conn) . "');</script>";
+                echo "<!-- SQL Error: " . $sql . " -->";
+            }
+        }
+    ?>
+
+    <script src="./js/profile-translate.js"></script>
     <script src="./js/burger-menu.js"></script>
 </body>
 </html>

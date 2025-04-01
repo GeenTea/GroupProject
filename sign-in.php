@@ -61,6 +61,7 @@
                     $sql = "SELECT * FROM users WHERE email = '$email'";
                     $result = mysqli_query($conn, $sql);
                     $user = mysqli_fetch_assoc($result);
+                    $_SESSION['id'] = $user['id'];
                     $_SESSION['username'] = $user['username1'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['phone'] = $user['phone'];
