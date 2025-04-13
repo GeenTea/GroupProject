@@ -1,36 +1,48 @@
+/* Importing Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jacques+Francois&family=Montserrat:ital,wght@0,301;1,301&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
+
+/* Resetting default margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+/* Styling for the body */
+body {
     background-color: #ffffff;
     color: #000000;
 }
-.red-background{
+
+/* Red background section styling */
+.red-background {
     background-color: #C9072A;
-    color:#FFFFFF;
+    color: #FFFFFF;
     font-family: Jacques Francois;
     font-size: 88px;
 }
-.login-sign-background{
+
+/* Styling for login and signup background */
+.login-sign-background {
     display: block;
     margin-top: 50px;
 }
-.login-sign-background h2{
+
+.login-sign-background h2 {
     margin-bottom: 50px;
 }
-.login-sign-card{
+
+/* Styling for login and signup card */
+.login-sign-card {
     background-color: #D9D9D9;
     width: 573px;
     height: 850px;
     border-radius: 25px;
 }
-.login-sign-card form input{
+
+/* Styling for form inputs inside login/signup card */
+.login-sign-card form input {
     display: block;
-}
-.login-sign-card form input{
     margin-bottom: 80px;
     width: 534px;
     height: 80px;
@@ -40,10 +52,12 @@ body{
     border-radius: 10px;
     font-family: Jacques Francois;
     font-size: 30px;
-    padding-left: 40px; 
-    color:#000000;
+    padding-left: 40px;
+    color: #000000;
 }
-.login-sign-button{
+
+/* Styling for login/signup button */
+.login-sign-button {
     width: 368px;
     height: 66px;
     border: none;
@@ -51,44 +65,51 @@ body{
     border-radius: 50px;
     font-family: Jacques Francois;
     font-size: 30px;
-
 }
-.login-sign-button:hover{
+
+/* Hover effect for login/signup button */
+.login-sign-button:hover {
     cursor: pointer;
 }
-.login-sign-card p{
+
+/* Styling for paragraphs inside login/signup card */
+.login-sign-card p {
     font-size: 30px;
 }
-#login-lang{
+
+/* Styling for language selection sections */
+#login-lang, #sign-lang {
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 320px;
+    margin-top: 320px; /* Adjusted for login */
+    margin-top: 150px; /* Adjusted for signup */
 }
-#sign-lang{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 150px;
-}
-#logo img{
-    max-width: 152px; 
+
+/* Styling for logo image */
+#logo img {
+    max-width: 152px;
     max-height: 110px;
 }
-header{
+
+/* Header styling */
+header {
     display: flex;
     width: 100%;
     height: 110px;
     background-color: #C9072A;
 }
-#title-web{
+
+/* Styling for website title in header */
+#title-web {
     display: flex;
     width: 280px;
     height: 50px;
     position: absolute;
     left: 45vw;
 }
-#title-web p{
+
+#title-web p {
     text-align: center;
     color: #FFFFFF;
     font-family: Jacques Francois;
@@ -98,62 +119,72 @@ header{
     letter-spacing: 0%;
     padding-top: 30px;
 }
-#WELSH:hover{
+
+/* Hover effect for language options */
+#WELSH:hover, #EN:hover {
     cursor: pointer;
 }
-#EN:hover{
-    cursor: pointer;
-}
-#burger-menu{
+
+/* Styling for burger menu */
+#burger-menu {
     width: 80px;
     height: 81px;
     position: absolute;
     right: 1px;
-    
 }
-#burger-menu p{
+
+#burger-menu p {
     color: #FFFFFF;
     font-size: 80px;
     font-weight: bold;
     position: relative;
     z-index: 2;
 }
-#burger-menu:hover{
+
+/* Hover effect for burger menu */
+#burger-menu:hover {
     cursor: pointer;
 }
-#nav-bar-constructor{
+
+/* Styling for navigation bar */
+#nav-bar-constructor {
     width: 40%;
     height: 122.4vh;
     background-color: #C9072A;
     margin-left: 20%;
     position: relative;
     z-index: 1;
+    visibility: hidden;
+    position: absolute;
+    right: 0;
 }
-nav ul{
+
+/* Styling for navigation menu */
+nav ul {
     visibility: hidden;
     list-style: none;
     position: absolute;
-    top:20%;
+    top: 20%;
     left: 35%;
     width: 400px;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-size: 45px;
     line-height: 100px;
     text-align: center;
 }
-nav ul li a:hover{
+
+/* Hover effect for navigation links */
+nav ul li a:hover {
     transition: 0.5s;
     font-size: 50px;
 }
-#nav-bar-constructor{
-    visibility: hidden;
-    position: absolute;
-    right: 0;
-}
-.white-scene{
+
+/* Styling for white overlay scene */
+.white-scene {
     width: 100%;
     height: 122.4%;
     background-color: #FFFFFF;
@@ -162,20 +193,25 @@ nav ul li a:hover{
     z-index: 1;
     visibility: hidden;
 }
-#home_page_img{
+
+/* Styling for home page image */
+#home_page_img {
     max-width: 100%;
     max-height: 48.25rem;
     overflow: hidden;
     position: relative;
     background-color: #FFFFFF;
 }
-#home_page_img img{
+
+#home_page_img img {
     width: 100%;
     height: 48.25rem;
     display: block;
     filter: opacity(50%);
 }
-#home_mainText{
+
+/* Styling for main text on home page */
+#home_mainText {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,26 +219,30 @@ nav ul li a:hover{
     text-align: left;
     width: 934px;
     height: 187px;
-
 }
-#home_mainText p{
+
+#home_mainText p {
     font-family: Jacques Francois;
     font-weight: bold;
     font-size: 94px;
     line-height: 84.41px;
     letter-spacing: 0%;
 }
-main{
+
+/* Styling for main content */
+main {
     display: block;
 }
-main form{
+
+main form {
     margin-left: 2.75rem;
     margin-top: 2.5rem;
     width: 700px;
     height: 16rem;
     margin-bottom: 33px;
 }
-main form label{
+
+main form label {
     font-family: Jacques Francois;
     font-weight: 400;
     font-size: 24px;
@@ -210,77 +250,98 @@ main form label{
     letter-spacing: 0%;
     color: #C9072A;
 }
-main form input{
+
+main form input {
     border: 1px solid #000000;
 }
-main form #email{
+
+/* Styling for email input */
+main form #email {
     width: 100%;
     height: 20px;
     margin-bottom: 1rem;
-    background-color: #D9D9D9;    ;
+    background-color: #D9D9D9;
 }
-main form #message{
+
+/* Styling for message input */
+main form #message {
     width: 100%;
     height: 8rem;
     margin-bottom: 1rem;
-    background-color: #D9D9D9
+    background-color: #D9D9D9;
 }
-main form textarea{
+
+main form textarea {
     resize: none;
     border: 1px solid #000000;
 }
-#submit-main-home{
+
+/* Styling for submit button */
+#submit-main-home {
     width: 7.375rem;
     height: 2.5rem;
     border-width: 1px;
     border-radius: 50px;
 }
 
-footer{
+/* Footer styling */
+footer {
     position: relative;
     bottom: 0px;
     background-color: #C9072A;
     height: 389px;
     color: #FFFFFF;
 }
-#contact-info{
+
+/* Styling for contact info in footer */
+#contact-info {
     width: 531px;
     height: 124px;
     text-align: center;
     font-family: Jacques Francois;
-    
 }
-#contact-info a{
+
+#contact-info a {
     text-decoration: none;
     color: #FFFFFF;
-    cursor:default;
+    cursor: default;
 }
-#contact-info-title{
+
+#contact-info-title {
     font-size: 32px;
     font-family: Jacques Francois;
 }
-#conctact-info-text{
+
+#conctact-info-text {
     font-size: 20px;
     font-weight: 400;
 }
-#open-hour{
+
+/* Styling for open hours in footer */
+#open-hour {
     width: 300px;
     height: 124px;
     text-align: center;
     font-family: Jacques Francois;
 }
-#open-hour-title{
+
+#open-hour-title {
     font-size: 32px;
     padding-bottom: 30px;
 }
-#open-hour-text{
+
+#open-hour-text {
     font-size: 20px;
 }
-#Copyright-symbol{
+
+/* Styling for copyright symbol */
+#Copyright-symbol {
     font-size: 20px;
     margin-top: 100px;
 }
-#social-media{
+
+/* Styling for social media section in footer */
+#social-media {
     position: absolute;
     bottom: 100px;
     left: 129px;
@@ -288,168 +349,220 @@ footer{
     font-family: Jacques Francois;
     font-size: 20px;
 }
-#social-media img{
+
+#social-media img {
     width: 30px;
     height: 30px;
     margin-left: 30px;
     margin-bottom: 20px;
 }
-#social-media-title{
+
+#social-media-title {
     font-size: 32px;
     margin-bottom: 23px;
 }
-#social-media p{
+
+#social-media p {
     padding-left: 10px;
     text-align: center;
-    font-weight:lighter;
+    font-weight: lighter;
 }
-#social-media a{
+
+#social-media a {
     text-decoration: none;
     color: #FFFFFF;
 }
-.flex{
+
+/* Flexbox utility class */
+.flex {
     display: flex;
 }
-#Legal-and-Policies{
+
+/* Styling for legal and policies section in footer */
+#Legal-and-Policies {
     position: absolute;
     right: 129px;
     bottom: 40px;
     font-family: Jacques Francois;
     font-size: 20px;
 }
-#Legal-title{
-    font-size: 32px;
-    margin-bottom: 23px;
-    text-align: center;
+/* Styling for the legal section title */
+#Legal-title {
+    font-size: 32px; /* Sets the font size for the title */
+    margin-bottom: 23px; /* Adds bottom margin for spacing */
+    text-align: center; /* Centers the text */
 }
-#legal-text a{
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-    text-align: center;
-    margin-bottom: 26.38px;
+
+/* Styling for legal section links */
+#legal-text a {
+    display: block; /* Makes the links block-level elements */
+    text-decoration: none; /* Removes underline from links */
+    color: #FFFFFF; /* Sets the text color to white */
+    text-align: center; /* Centers the text */
+    margin-bottom: 26.38px; /* Adds bottom margin for spacing */
 }
-.footer-profile{
+
+/* Styling for profile section */
+.footer-profile {
     position: absolute;
     bottom: 0px;
 }
-#main-profile{
-    height: 90vh;
-    margin: 0;
-}
-#profile-title{
-    font-size: 64px;
-    font-family: Jacques Francois;
-}
-#form-profile{
-    margin-left: -100px;
-}
-#form-profile form input{
-    width: 530px;
-    height: 70px;
-    border: none;
-    background-color: #D9D9D9;
-    font-family: Jacques Francois;
-    font-size: 30px;
-    padding-left: 40px;
-    margin-bottom: 32px;
-    color:#000000;
+/* Styling for the main profile section */
+#main-profile {
+    height: 90vh; /* Sets the height of the profile section */
+    margin: 0; /* Removes default margin */
 }
 
-#form-profile form button{
-    width: 200px;
-    height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-color: #D9D9D9;
-    color: #000;
-    font-family: Jacques Francois;
-    font-size: 30px;
-    margin-left: 10px;
+/* Styling for the profile title */
+#profile-title {
+    font-size: 64px; /* Sets font size for the title */
+    font-family: Jacques Francois; /* Applies the specified font */
 }
-#form-profile form button:hover{
+
+/* Styling for the profile form container */
+#form-profile {
+    margin-left: -100px; /* Adjusts the left margin for alignment */
+}
+
+/* Styling for input fields inside the profile form */
+#form-profile form input {
+    width: 530px; /* Sets the width of the input fields */
+    height: 70px; /* Sets the height of the input fields */
+    border: none; /* Removes the border */
+    background-color: #D9D9D9; /* Sets the background color */
+    font-family: Jacques Francois; /* Applies the specified font */
+    font-size: 30px; /* Sets font size for the input text */
+    padding-left: 40px; /* Adds padding to the left */
+    margin-bottom: 32px; /* Adds bottom margin for spacing */
+    color: #000000; /* Sets the text color */
+}
+
+/* Styling for buttons inside the profile form */
+#form-profile form button {
+    width: 200px; /* Sets the width of the button */
+    height: 50px; /* Sets the height of the button */
+    border: none; /* Removes the border */
+    border-radius: 50px; /* Makes the button edges rounded */
+    background-color: #D9D9D9; /* Sets the background color */
+    color: #000; /* Sets the text color */
+    font-family: Jacques Francois; /* Applies the specified font */
+    font-size: 30px; /* Sets font size for the button text */
+    margin-left: 10px; /* Adds left margin for spacing */
+}
+
+/* Hover effect for profile form button */
+#form-profile form button:hover {
     cursor: pointer;
 }
-#delete-profile{
-    margin-left: 101px;
+/* Styling for delete profile button */
+#delete-profile {
+    margin-left: 101px; /* Adds left margin for spacing */
 }
-#img-profile{
-    margin-top: 30px;
+
+/* Styling for profile image container */
+#img-profile {
+    margin-top: 30px; /* Adds top margin for spacing */
 }
-#img-profile img{
-    width: 302px;
-    height: 152px;
-    border-radius: 50%;
-    overflow: hidden;
+
+/* Styling for profile image */
+#img-profile img {
+    width: 302px; /* Sets the width of the image */
+    height: 152px; /* Sets the height of the image */
+    border-radius: 50%; /* Makes the image circular */
+    overflow: hidden; /* Ensures content outside the circle is hidden */
 }
-#main-legalAndPolicies{
+
+/* Styling for legal and policies main section */
+#main-legalAndPolicies {
     height: 90vh;
     margin: 0;
     justify-content: center;
     align-items: center;
 }
-.cart_legalAndPolicies{
+
+/* Styling for legal and policies cards */
+.cart_legalAndPolicies {
     width: 400px;
     height: 700px;
     border-radius: 25px;
     background-color: #D9D9D9;
     color: #000000;
     font-family: Jacques Francois;
-}
-.cart_legalAndPolicies{
     margin: 55px;
 }
-.cart-text-legal{
-    margin-left: 20px;
-    margin-top: 20px;
-    font-size: 24px;    
+/* Styling for legal and policies text inside cards */
+.cart-text-legal {
+    margin-left: 20px; /* Adds left margin for spacing */
+    margin-top: 20px; /* Adds top margin for spacing */
+    font-size: 24px; /* Sets font size for the text */
 }
-.cart-text-legal h1{
-    margin-bottom: 96px;
+
+/* Styling for headings inside legal and policies cards */
+.cart-text-legal h1 {
+    margin-bottom: 96px; /* Adds bottom margin for spacing */
 }
-.cart-text-legal ol{
-    list-style: circle;
+
+/* Styling for ordered lists inside legal and policies cards */
+.cart-text-legal ol {
+    list-style: circle; /* Sets list style to circle */
 }
-#legalAndPolicies-Title{
-    font-size: 64px;
+
+/* Styling for the main title of legal and policies section */
+#legalAndPolicies-Title {
+    font-size: 64px; /* Sets font size for the title */
 }
+
+/* Centering legal and policies cards */
 .center-cart {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 20px; /* Space between carts */
+    gap: 20px; /* Space between cards */
     width: 100%;
     margin: 0 auto;
     padding: 10px;
 }
-.cart-text-activities{
+
+/* Styling for activities section */
+.cart-text-activities {
     font-family: Jacques Francois;
     font-size: 24px;
 }
-.cart-text-activities h1{
+/* Styling for activities section headings */
+.cart-text-activities h1 {
     font-size: 40px;
     font-family: Jacques Francois;
 }
-#practice{
+
+/* Styling for practice section */
+#practice {
     margin-bottom: 26px;
 }
-.cart-text-activities img{
+
+/* Styling for activity images */
+.cart-text-activities img {
     margin-top: 130px;
     width: 399px;
     height: 225px;
 }
+
+/* Styling for practice image */
 #practice-img {
     width: 300px;
     height: 300px;
     margin-top: 0px;
 }
-#party-img{
+
+/* Styling for party image */
+#party-img {
     width: 365px;
     height: 243px;
     margin-top: 15px;
     margin-bottom: 0px;
 }
-#dart-img{
+
+/* Styling for dart image */
+#dart-img {
     width: 261px;
     height: 174px;
     margin-top: 0px;

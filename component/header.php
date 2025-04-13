@@ -1,18 +1,24 @@
 <?php
 
+    // Check if the user is not logged in (session username is not set)
     if(!isset($_SESSION['username'])){
+        // Display header for non-logged-in users
         echo "
         <header>
             <div id='logo'>
+                <!-- Logo Section -->
                 <img src='./img/ed7e618b16ff89c1ac6e873a459f4cd5.png' alt='logo'>
             </div>
             <div id='title-web'>
+                <!-- Language Switch Section -->
                 <p id='WELSH' onclick='switchLang(\"WELSH\")'>CYMRAEG</p> <p>/</p> <p id='EN' onclick='switchLang(\"EN\")'>ENGLISH</p>
             </div>
             <div id='burger-menu'>
+                <!-- Burger Menu Icon -->
                 <p onclick='burger_menu()'>☰</p>
             </div>
             <nav id='nav-bar-constructor'>
+                <!-- Navigation Bar for Non-Logged-In Users -->
                 <ul id='nav-bar'>
                     <center>
                         <li><a href='./index.php' id='main-link'>MAIN PAGE</a></li>
@@ -26,18 +32,23 @@
         </header>
     ";
     }else{
+        // Display header for logged-in users
         echo '
         <header>
             <div id="logo">
+                <!-- Logo Section -->
                 <img src="./img/ed7e618b16ff89c1ac6e873a459f4cd5.png" alt="logo">
             </div>
             <div id="title-web">
+                <!-- Language Switch Section -->
                 <p id="WELSH" onclick="switchLang(\'WELSH\')">CYMRAEG</p> <p>/</p> <p id="EN" onclick="switchLang(\'EN\')">ENGLISH</p>
             </div>
             <div id="burger-menu">
+                <!-- Burger Menu Icon -->
                 <p onclick="burger_menu()">☰</p>
             </div>
             <nav id="nav-bar-constructor">
+                <!-- Navigation Bar for Logged-In Users -->
                 <ul id="nav-bar">
                     <center>
                         <li><a href="./index.php" id="main-link">MAIN PAGE</a></li>

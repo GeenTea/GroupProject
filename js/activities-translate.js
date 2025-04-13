@@ -1,7 +1,8 @@
 var Language = 'EN';
 
+//transalation function for the activities page
 const switchLang = (lang)=>{
-
+        //translate for english
         if(lang=='EN'){
                 document.getElementById('open-hour-title').innerHTML = 'Opening Hours';
                 document.getElementById('open-hour-text').innerHTML = 'Monday - Friday: 08:00 - 21:00 Saturday - Sunday: 10:00 - 22:00';
@@ -34,7 +35,7 @@ const switchLang = (lang)=>{
 
                 Language = 'EN';
         }
-
+        //translate for welsh
         else if(lang=='WELSH'){
                 const WELSH = document.getElementById('WELSH');
                 document.getElementById('open-hour-title').innerHTML = 'Oriau Agor';

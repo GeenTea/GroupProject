@@ -1,5 +1,6 @@
 var Language = 'EN';
 
+// This function is used to change the language of the page to English for the Legal & Policies page
 const switchLang = (lang) => {
     if (lang == 'EN') {
         // Header and footer translations
@@ -43,6 +44,7 @@ const switchLang = (lang) => {
 
         Language = 'EN';
     }
+    // Welsh translations
     else if (lang == 'WELSH') {
         // Header and footer translations
         document.getElementById('open-hour-title').innerHTML = 'Oriau Agor';
