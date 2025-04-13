@@ -1,8 +1,10 @@
 var Language = 'EN';
 
+// This function is used to change the language of the page to English for the Login page
 const Language_EN = ()=>{
     const EN = document.getElementById('EN');
     
+    // Check if the current language is not English
     if(Language!='EN'){
         document.getElementById('login-title').innerHTML = 'LOGIN';
         document.getElementById('username').placeholder = 'Username';
@@ -15,6 +17,7 @@ const Language_EN = ()=>{
     }
 }
 
+// This function is used to change the language of the page to Welsh for the Login page
 const Language_Welsh = ()=>{
     const WELSH = document.getElementById('WELSH');
     

@@ -1,5 +1,6 @@
 var Language = 'EN';
 
+// This function is used to change the language of the page to English for the Sign Up page
 const Language_EN = ()=>{
     const EN = document.getElementById('EN');
     
@@ -17,6 +18,7 @@ const Language_EN = ()=>{
     }
 }
 
+// This function is used to change the language of the page to Welsh for the Sign Up page
 const Language_Welsh = ()=>{
     const WELSH = document.getElementById('WELSH');
     

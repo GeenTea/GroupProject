@@ -1,5 +1,6 @@
 var Language = 'EN';
 
+// This function is used to change the language of the page to English or Welsh
 const Language_EN = ()=>{
 
         document.getElementById('form-contact-us').innerHTML = 'CONTACT US';
@@ -29,7 +30,7 @@ const Language_EN = ()=>{
         Language = 'EN';
 
 }
-
+// This function is used to change the language of the page to Welsh
 const Language_Welsh = ()=>{
     const WELSH = document.getElementById('WELSH');
 
@@ -61,4 +62,5 @@ const Language_Welsh = ()=>{
 
 }
 
+//Here we export the functions to be used in other files
 export {Language_EN, Language_Welsh};
